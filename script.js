@@ -69,19 +69,19 @@ function startCountdown() {
 }
 startCountdown();
 
-// ===== ADD TO CART (TOAST) =====
+// ===== ENROLLMENT (TOAST) =====
 const productNames = {
-  paint: 'Premium Interior Paint',
-  steel: 'Fe-500D TMT Steel Bars',
-  cement: 'OPC 53 Grade Cement',
-  sanitary: 'Designer Wash Basin Set',
-  electrical: 'Modular Switches Kit',
-  tiles: 'Vitrified Floor Tiles'
+  webdev: 'Full-Stack Web Dev Bootcamp',
+  calculus: 'Advanced Calculus Notes',
+  sat: 'Complete SAT Prep Guide',
+  python: 'Python for Data Science',
+  design: 'UI/UX Masterclass',
+  business: 'Business Strategy 101'
 };
 
 function addToCart(product) {
   const toast = document.getElementById('toast');
-  toast.innerHTML = `✅ <strong>${productNames[product]}</strong> added to cart!`;
+  toast.innerHTML = `🎓 Successfully enrolled in <strong>${productNames[product]}</strong>!`;
   toast.style.transform = 'translateY(0)';
   toast.style.opacity = '1';
   setTimeout(() => {
@@ -96,7 +96,7 @@ function handleSubmit(e) {
   const form = e.target;
   const name = form.querySelector('#name').value;
   const toast = document.getElementById('toast');
-  toast.innerHTML = `🎉 Thank you, <strong>${name}</strong>! We'll contact you within 2 hours.`;
+  toast.innerHTML = `🎉 Thank you, <strong>${name}</strong>! An academic advisor will contact you within 2 hours.`;
   toast.style.transform = 'translateY(0)';
   toast.style.opacity = '1';
   form.reset();
